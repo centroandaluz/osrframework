@@ -1,107 +1,106 @@
 OSRFramework
 ============
 
-OSRFramework: Open Sources Research Framework
+OSRFramework: Marco de investigación de fuentes abiertas
 
-Copyright (C) 2014-2018  F. Brezo and Y. Rubio, i3visio
+Copyright (C) 2014-2018 F. Brezo e Y. Rubio, i3visio
 
-[![Version in PyPI](https://img.shields.io/pypi/v/osrframework.svg)]()
-[![License](https://img.shields.io/badge/license-GNU%20Affero%20General%20Public%20License%20Version%203%20or%20Later-blue.svg)]()
+[! [Versión en PyPI] (https://img.shields.io/pypi/v/osrframework.svg)] ()
+[! [Licencia] (https://img.shields.io/badge/license-GNU%20Affero%20General%20Public%20License%20Version%203%20or%20Later-blue.svg)] ()
 
-1 - Description
+1 - Descripción
 ---------------
 
-OSRFramework is a GNU AGPLv3+ set of libraries developed by i3visio to perform
-Open Source Intelligence tasks. They include references to a bunch of different
-applications related to username checking, DNS lookups, information leaks
-research, deep web search, regular expressions extraction and many others.
-At the same time, by means of ad-hoc Maltego transforms, OSRFramework provides
-a way of making these queries graphically as well as several interfaces to
-interact with like OSRFConsole or a Web interface.
+OSRFramework es un conjunto de bibliotecas GNU AGPLv3 + desarrollado por i3visio para realizar
+Tareas de inteligencia de código abierto. Incluyen referencias a un montón de diferentes
+aplicaciones relacionadas con la verificación de nombre de usuario, búsquedas de DNS, fugas de información
+investigación, búsqueda en la web profunda, extracción de expresiones regulares y muchos otros.
+Al mismo tiempo, mediante transformaciones ad-hoc de Maltego, OSRFramework proporciona
+una forma de hacer estas consultas, interactuar con OSRFConsole o una interfaz web.
 
-2 - License: GNU AGPLv3+
+2 - Licencia: GNU AGPLv3 +
 ------------------------
 
-This is free software, and you are welcome to redistribute it under certain
-conditions.
+Este es un software gratuito y puede redistribuirlo bajo ciertas
+condiciones.
 
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU Affero General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+Este programa es software libre: puede redistribuirlo y / o modificarlo
+bajo los términos de la Licencia Pública General GNU publicada por
+Free Software Foundation, o la versión 3 de la Licencia, o
+(a su elección) cualquier versión posterior.
 
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU Affero General Public License for more details.
+Este programa se distribuye con la esperanza de que sea útil,
+pero CON CUALQUIER GARANTÍA; sin siquiera la garantía implícita de
+COMERCIABILIDAD o APTITUD PARA UN PROPÓSITO EN PARTICULAR. Ver el
+GNU Affero General Public License para más detalles.
 
-	You should have received a copy of the GNU Affero General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Debería haber recibido una copia de la GNU Affero General Public License
+junto con este programa. Si no, vea <http://www.gnu.org/licenses/>.
 
 
-For more details on this issue, check the [COPYING](COPYING) file.
+Para obtener más detalles sobre este problema, consulte el archivo [COPIANDO] (COPIANDO).
 
-3 - Installation
+3 - Instalación
 ----------------
 
-Fast way to do it on any system for a user with administration privileges:
-```
-pip2 install osrframework
-```
-You can upgrade to the latest release of the framework with:
-```
+Forma rápida de hacerlo en cualquier sistema para un usuario con administración privilegiada:
+`` `
+pip2 instalar osrframework
+`` `
+Puede actualizar a la última versión del marco con:
+`` `
 pip2 install osrframework --upgrade
-```
-This will manage all the dependencies for you and install the latest version of
-the framework.
+`` `
+Esta versión de la última versión de
+El marco.
 
-If you needed further information on how to install OSRFramework on certain
-systems, note that you may need to add `export PATH=$PATH:$HOME/.local/bin` to
-your `~/.bashrc_profile`). This has been confirmed in some distributions,
-including MacOS. In any case, we recommend you yo have a look at the
-[INSTALL.md](doc/INSTALL.md) file where we provide additional details for these
-cases.
+Si necesita más información sobre cómo instalar OSRFramework en ciertos
+sistemas, tenga en cuenta que es posible que deba agregar `PATH = $ PATH: $ HOME / .local / bin` a
+su `~ / .bashrc_profile`). Esto ha sido confirmado en algunas distribuciones,
+incluyendo MacOS En cualquier caso, le recomendamos que eche un vistazo a
+[INSTALL.MD] (doc / INSTALL.MD) donde proporcionamos detalles adicionales para estos
+cajas.
 
-4 - Basic usage
+4 - Uso básico
 ---------------
 
-If everything went correctly (we hope so!), it's time for trying usufy.py,
-mailfy.py and so on. But we are they? They are installed in your path meaning
-that you can open a terminal anywhere and typing the name of the program (seems
-to be an improvement from previous installations...). Examples:
-```
+Si todo salió correctamente (¡eso esperamos!), Es hora de probar usufy.py,
+mailfy.py y así sucesivamente. Pero nosotros somos ellos? Se instalan en tu camino
+que puedes abrir el terminal y escribir el nombre del programa (parece
+ser una mejora de instalaciones anteriores ...). ejemplos:
+`` `
 osrf --help
 usufy -n i3visio febrezo yrubiosec -p twitter facebook
 searchfy -q "i3visio"
 mailfy -n i3visio
-```
+`` `
 
-Type -h or --help to get more information about which are the parameters of each
-application.
+Escriba -h o --help para obtener más información sobre cuáles son los parámetros de cada
+aplicación.
 
-You can find the configuration files in a folder created in your user home to
-define the default behaviour of the applications:
-```
-# Configuration files for Linux and MacOS
-~/.config/OSRFramework/
-# Configuration files for Windows
-C:\Users\<User>\OSRFramework\
-```
+Puede encontrar los archivos de configuración en una carpeta creada en la página de inicio de su usuario
+define el comportamiento predeterminado de las aplicaciones:
+`` `
+# Archivos de configuración para Linux y MacOS
+~ / .Config / OSRFramework /
+# Archivos de configuración para Windows
+C: \ Users \ <usuario> \ OSRFramework \
+`` `
 
-OSRFramework will look for the configuration settings stored there. You can add
-new credentials there and if something goes wrong, you can always restore the
-files stored in the `defaults` subfolder.
+OSRFramework buscará los ajustes de configuración almacenados allí. Puedes agregar
+nuevas credenciales allí y si algo sale mal, siempre puede restaurar el
+archivos almacenados en la subcarpeta `por defecto`.
 
-If you are experiencing problems, you might fight relevant information in the
-(FAQ Section)[doc/FAQ.md].
+Si tienes problemas,
+(Sección de preguntas frecuentes) [doc / FAQ.md].
 
 5 - HACKING
 -----------
 
-If you want to extend the functionalities of OSRFramework and you do not know
-where to start from, check the [HACKING.md](doc/HACKING.md) file.
+Si desea ampliar las funcionalidades de OSRFramework y no sabe
+desde dónde comenzar, verifique el archivo [HACKING.md] (doc / HACKING.md).
 
-6 - AUTHORS
+6 - AUTORES
 -----------
 
-More details about the authors in the [AUTHORS.md](AUTHORS.md) file.
+[AUTHORS.md] (AUTHORS.md) archivo.
